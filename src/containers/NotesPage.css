@@ -23,3 +23,9 @@
 .Home .notes p {
   color: #666;
 }
+
+.lander li {
+  display: inline-block;
+  margin: auto;
+  padding: 2em;
+}

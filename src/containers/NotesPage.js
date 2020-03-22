@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { API } from "aws-amplify";
 import { LinkContainer } from "react-router-bootstrap";
 import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
-import "./Home.css";
+import "./NotesPage.css";
 
-export default function Home(props) {
+export default function NotesPage(props) {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 

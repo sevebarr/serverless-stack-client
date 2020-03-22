@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import "./index.css"; // format page
+import App from "./App"; // App Component
 import { BrowserRouter as Router } from "react-router-dom";
-import Amplify from "aws-amplify";
+import Amplify from "aws-amplify"; // imports Amplify to know how to use configuration
 import config from "./config";
+import * as serviceWorker from "./serviceWorker";
 
+// Setting up various AWS resources that we want to interact with
 Amplify.configure({
   Auth: {
-    mandatorySignIn: true,
+    mandatorySignIn: true, // User must be signed in in order to interact with our app
     region: config.cognito.REGION,
     userPoolId: config.cognito.USER_POOL_ID,
     identityPoolId: config.cognito.IDENTITY_POOL_ID,
@@ -34,6 +35,9 @@ Amplify.configure({
 ReactDOM.render(
   <Router>
     <App />
+    {/* App component which encapsulates the entire app */}
+    {/* The Router renders the App component and serves out pages */}
+    {/*  */}
   </Router>,
   document.getElementById("root")
 );
